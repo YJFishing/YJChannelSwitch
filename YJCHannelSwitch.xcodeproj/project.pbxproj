@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A5EBF81FF3901400378729 /* YJChannelHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A5EBF71FF3901400378729 /* YJChannelHeader.m */; };
 		39BF18B11FF38DB400901216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BF18B01FF38DB400901216 /* AppDelegate.m */; };
 		39BF18B41FF38DB400901216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BF18B31FF38DB400901216 /* ViewController.m */; };
 		39BF18B71FF38DB400901216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BF18B51FF38DB400901216 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39A5EBF61FF3901400378729 /* YJChannelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJChannelHeader.h; sourceTree = "<group>"; };
+		39A5EBF71FF3901400378729 /* YJChannelHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJChannelHeader.m; sourceTree = "<group>"; };
 		39BF18AC1FF38DB400901216 /* YJCHannelSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJCHannelSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BF18AF1FF38DB400901216 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39BF18B01FF38DB400901216 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,9 +81,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39A5EBF51FF38F7C00378729 /* YJChannelControl */ = {
+			isa = PBXGroup;
+			children = (
+				39A5EBF61FF3901400378729 /* YJChannelHeader.h */,
+				39A5EBF71FF3901400378729 /* YJChannelHeader.m */,
+			);
+			path = YJChannelControl;
+			sourceTree = "<group>";
+		};
 		39BF18A31FF38DB400901216 = {
 			isa = PBXGroup;
 			children = (
+				39A5EBF51FF38F7C00378729 /* YJChannelControl */,
 				39BF18AE1FF38DB400901216 /* YJCHannelSwitch */,
 				39BF18C71FF38DB400901216 /* YJCHannelSwitchTests */,
 				39BF18D21FF38DB400901216 /* YJCHannelSwitchUITests */,
@@ -266,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39BF18B41FF38DB400901216 /* ViewController.m in Sources */,
+				39A5EBF81FF3901400378729 /* YJChannelHeader.m in Sources */,
 				39BF18BF1FF38DB400901216 /* main.m in Sources */,
 				39BF18B11FF38DB400901216 /* AppDelegate.m in Sources */,
 			);
@@ -430,12 +444,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG84E84LV7;
 				INFOPLIST_FILE = YJCHannelSwitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.learn.YJCoder.YJCHannelSwitch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.learn.YJCoder.YJCHannelSwitch1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,12 +460,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG84E84LV7;
 				INFOPLIST_FILE = YJCHannelSwitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.learn.YJCoder.YJCHannelSwitch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.learn.YJCoder.YJCHannelSwitch1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
