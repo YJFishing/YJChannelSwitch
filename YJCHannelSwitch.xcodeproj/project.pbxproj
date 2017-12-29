@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		394BD6821FF672C700B01ACD /* YJChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 394BD6811FF672C700B01ACD /* YJChannelView.m */; };
 		39A5EBF81FF3901400378729 /* YJChannelHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A5EBF71FF3901400378729 /* YJChannelHeader.m */; };
 		39A5EBFB1FF3FBC600378729 /* YJChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A5EBFA1FF3FBC600378729 /* YJChannelCell.m */; };
 		39BF18B11FF38DB400901216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BF18B01FF38DB400901216 /* AppDelegate.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		394BD6801FF672C700B01ACD /* YJChannelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJChannelView.h; sourceTree = "<group>"; };
+		394BD6811FF672C700B01ACD /* YJChannelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJChannelView.m; sourceTree = "<group>"; };
 		39A5EBF61FF3901400378729 /* YJChannelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJChannelHeader.h; sourceTree = "<group>"; };
 		39A5EBF71FF3901400378729 /* YJChannelHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJChannelHeader.m; sourceTree = "<group>"; };
 		39A5EBF91FF3FBC600378729 /* YJChannelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJChannelCell.h; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				39A5EBF71FF3901400378729 /* YJChannelHeader.m */,
 				39A5EBF91FF3FBC600378729 /* YJChannelCell.h */,
 				39A5EBFA1FF3FBC600378729 /* YJChannelCell.m */,
+				394BD6801FF672C700B01ACD /* YJChannelView.h */,
+				394BD6811FF672C700B01ACD /* YJChannelView.m */,
 			);
 			path = YJChannelControl;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				39BF18BF1FF38DB400901216 /* main.m in Sources */,
 				39BF18B11FF38DB400901216 /* AppDelegate.m in Sources */,
 				39A5EBFB1FF3FBC600378729 /* YJChannelCell.m in Sources */,
+				394BD6821FF672C700B01ACD /* YJChannelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
