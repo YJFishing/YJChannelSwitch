@@ -54,12 +54,12 @@
 -(void)addBorderLayer {
     _borderLayer = [CAShapeLayer layer];
     _borderLayer.bounds = self.bounds;
-    _borderLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMinY(self.bounds));
+    _borderLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     _borderLayer.path = [UIBezierPath bezierPathWithRoundedRect:_borderLayer.bounds cornerRadius:self.layer.cornerRadius].CGPath;
     _borderLayer.lineWidth = 1;
+     _borderLayer.lineDashPattern = @[@5,@3];
     _borderLayer.fillColor = [UIColor clearColor].CGColor;
     _borderLayer.strokeColor = [self backgroundColor].CGColor;
-    _borderLayer.lineDashPattern = @[@5,@3];
     [self.layer addSublayer:_borderLayer];
     _borderLayer.hidden = YES;
 }
