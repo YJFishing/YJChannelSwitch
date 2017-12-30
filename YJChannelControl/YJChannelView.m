@@ -175,6 +175,55 @@ static CGFloat CellMarginY = 10.0f;
     [_inUseTitles insertObject:obj atIndex:_targetIndexPaht.row];
 }
 - (void)reloadData {
-    
+    [_collectionView reloadData];
 }
+
+#pragma mark -UICollectionViewDelegate & UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return section == 0 ? _inUseTitles.count : _unUseTitles.count;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 2;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    YJChannelHeader *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([YJChannelHeader class]) forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        headerView.title = @"已选频道";
+        headerView.subtitle = @"按住拖动调整顺序";
+    }else {
+        headerView.title = @"推荐频道";
+        headerView.subtitle = @"";
+    }
+    return headerView;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    YJChannelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([YJChannelCell class]) forIndexPath:indexPath];
+    cell.title = indexPath.section == 0 ? _inUseTitles[indexPath.row] : _unUseTitles[indexPath.row];
+    cell.isFixed = indexPath.section == 0 && indexPath.row == 0;
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        if ([_collectionView numberOfItemsInSection:0] == 1) {
+            return;
+        }
+        if (indexPath.row == 0) {
+            return;
+        }
+        id obj = [_inUseTitles objectAtIndex:indexPath.row];
+        [_inUseTitles removeObject:obj];
+        [_unUseTitles insertObject:obj atIndex:0];
+        [_collectionView moveItemAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+    }else {
+        id obj = [_unUseTitles objectAtIndex:indexPath.row];
+        [_unUseTitles removeObject:obj];
+        [_inUseTitles addObject:obj];
+        [_collectionView moveItemAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForRow:_inUseTitles.count - 1 inSection:0]];
+    }
+}
+
 @end
